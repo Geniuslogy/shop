@@ -1,0 +1,22 @@
+<section>
+  <div class="container mt-100">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mb-9 mb-lg-9">
+        <input (keyup)="search($event)" class="form-control form-control-lg search" name="search" type="search" placeholder="Search for products ..."> 
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-products">
+  <div class="container mt-100">
+    <div class="row">
+      <div *ngFor="let item of products$.products" class="box col-lg-3 col-md-12 mb-12 mb-lg-0">
+        <div class="card rounded shadow-sm border-0">
+          <div class="card-body p-4"><img src="{{ item.product_image.url }}" alt="" class="product-img img-fluid d-block mx-auto mb-3">
+            <h5> <a href="#" class="text-dark">{{ item.name }}</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
